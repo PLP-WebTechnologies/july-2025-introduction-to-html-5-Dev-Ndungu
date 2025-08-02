@@ -1,0 +1,51 @@
+# Combined Program for Various Python Tasks
+
+# Task 1: Sum of Integers in a List
+def sum_of_integers():
+    numbers = input("Enter integers separated by spaces: ")
+    int_list = [int(num) for num in numbers.split()]
+    total_sum = sum(int_list)
+    print(f"The sum of the integers is: {total_sum}")
+
+# Task 2: Tuple of Favorite Books
+def favorite_books():
+    favorite_books = ("1984", "To Kill a Mockingbird", "The Great Gatsby", "Moby Dick", "Pride and Prejudice")
+    for book in favorite_books:
+        print(book)
+
+# Task 3: Dictionary to Store Personal Information
+def personal_information():
+    person_info = {}
+    person_info['name'] = input("Enter your name: ")
+    person_info['age'] = input("Enter your age: ")
+    person_info['favorite_color'] = input("Enter your favorite color: ")
+    print(person_info)
+
+# Task 4: Common Elements in Two Sets
+def common_elements_in_sets():
+    set1 = set(map(int, input("Enter integers for the first set separated by spaces: ").split()))
+    set2 = set(map(int, input("Enter integers for the second set separated by spaces: ").split()))
+    common_elements = set1.intersection(set2)
+    print(f"Common elements: {common_elements}")
+
+# Task 5: List Comprehension for Words with Odd Length
+def odd_length_words():
+    words = input("Enter words separated by spaces: ").split()
+    odd_length_words = [word for word in words if len(word) % 2 != 0]
+    print(f"Words with an odd number of characters: {odd_length_words}")
+
+# Main function to execute all tasks
+def main():
+    print("Task 1: Sum of Integers")
+    sum_of_integers()
+    print("\nTask 2: Favorite Books")
+    favorite_books()
+    print("\nTask 3: Personal Information")
+    personal_information()
+    print("\nTask 4: Common Elements in Sets")
+    common_elements_in_sets()
+    print("\nTask 5: Odd Length Words")
+    odd_length_words()
+
+if __name__ == "__main__":
+    main()
